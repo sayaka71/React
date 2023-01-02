@@ -1,7 +1,9 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import { Inter } from '@next/font/google'
+//
 import styles from '../styles/Home.module.css'
+import { SystemConst } from '../utils/const'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,10 +17,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <h1>Data Form</h1>
-        <form action="http://localhost:3000/api/item/create" method="post">
-            <input type="text" name="title"></input>
-            <button type="submit">Submit</button>
+        <h1>データ入力窓口</h1>
+        <form action={SystemConst.Server.URL + "api/item/create"} method="post">
+            日時：<input type="datetime-local" name="datetime"></input>
+            タイトル：<input type="text" name="title"></input>
+            イメージ：<input type="file" name="image" accept='image/*'></input>
+            説明：<textarea name="description"></textarea>
+            <button type="submit">投稿</button>
         </form>
       </main>
     </>
