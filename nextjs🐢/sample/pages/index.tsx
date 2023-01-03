@@ -18,7 +18,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1>データ入力窓口</h1>
-        <form action={SystemConst.Server.URL + "api/item/create"} method="post">
+        <form action={SystemConst.Server.hostURL + "api/item/create"} method="post">
             日時：<input type="datetime-local" name="datetime"></input>
             タイトル：<input type="text" name="title"></input>
             イメージ：<input type="file" name="image" accept='image/*'></input>
