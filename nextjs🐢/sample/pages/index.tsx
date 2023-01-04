@@ -25,6 +25,15 @@ export default function Home() {
             説明：<textarea name="description"></textarea>
             <button type="submit">投稿</button>
         </form>
+        
+        <h1>データ編集窓口</h1>
+        <form action={SystemConst.Server.hostURL + "api/item/update/63b5022f3e40b8c1351a2556"} method="post">
+            日時：<input type="datetime-local" name="datetime"></input>
+            タイトル：<input type="text" name="title"></input>
+            イメージ：<input type="file" name="image" accept='image/*'></input>
+            説明：<textarea name="description"></textarea>
+            <button type="submit">投稿</button>
+        </form>
       </main>
     </>
   )

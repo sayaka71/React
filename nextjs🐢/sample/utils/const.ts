@@ -7,4 +7,9 @@ export namespace SystemConst {
         // DBアドレス (mongodb+srv://<user>:<password>@cluster0.kflyuot.mongodb.net/?retryWrites=true&w=majority)
         export const dbURL = "mongodb+srv://kanai:mongo-pwd@cluster0.kflyuot.mongodb.net/?retryWrites=true&w=majority";
     }
+    // ログイン (トークン方式)
+    export namespace Login {
+        // シークレットキー
+        export const secretKey = "nextjs";
+    }
 }

@@ -16,3 +16,9 @@ export interface Data {
   message: string;
   item?: {}; // 変数名?：あってもなくても構わない変数
 }
+
+// auth.ts
+export interface DecodedTokenType {
+    email: string;
+    name: string;
+}
